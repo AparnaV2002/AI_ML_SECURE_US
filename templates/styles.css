@@ -1,0 +1,14 @@
+.root{
+    width: 50%;
+    height:50%;
+}
+.one{
+    height:50%;
+    width:25%;
+    float:left;
+}
+.two{
+    height:50%;
+    width:25%;
+    float:right;
+}

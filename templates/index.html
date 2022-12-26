@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SECURE US</title>
+</head>
+
+<body style="text-align:center;background-color: antiquewhite;">
+  <h1 style="background-attachment: fixed;color:blue"><b>Secure Us</b></h1>
+  <div>
+
+    <img src="{{ url_for('video') }}" width="50%" />
+  </div>
+
+    <h1 style="background-attachment: fixed;color:blue">Detected Photos</h1>
+    <div id="img" ></div>
+  
+  <button onclick="refresh()" style="color:brown">Refresh</button>
+  
+  
+      
+   <form action=" http://127.0.0.1:5000/pincode" method="get">
+    
+    <h1 style="background-attachment: fixed;color:blue">Nearby Neighbour</h1>
+    <pre><select name="cars" id="cars">
+  <option value="01"></option>
+  <option value="02">Neighbour1 - 9874526341</option>
+  <option value="03">Neighbour2 - 9874789645</option>
+  <option value="04">Neighbour3 - 9874545612</option>
+</select>     <img style="width:2%;height:2%" src="https://cdn-icons-png.flaticon.com/512/217/217887.png"><img></pre>
+    <h1 style="background-attachment: fixed;color:blue">Search for pincode</h1>
+    <input type="number" name="pincode" maxlength="6"><br><br>
+    <button>Submit</button>
+
+    <h1 style="background-attachment: fixed;color:blue">Today's Onduty Cop</h1>
+    <pre><select name="cars" id="cars">
+  <option value="01"></option>
+  <option value="02">Cop1 - 9874526341</option>
+  <option value="03">Cop2 - 9874789645</option>
+  <option value="04">Cop3 - 9874545612</option>
+</select>     <img style="width:2%;height:2%" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8PDw4NDQ8NDQ0ODQ0NDQ0NDg8NDQ0NFREWFhURFRYYHSggGBolHRUVITIhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGi0lHh8tKy0rLSstKystLS0tLS0tLy0rMC0tKy0rKy0rLS0tLS0rLS0tLSsrLS0rLSsrMC0uLf/AABEIAMIBAwMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQIDBAYHBf/EAEQQAAIBAgEIBAoGCAcAAAAAAAABAgMRBAUGEiExQVFxEyJhkQcyYnKBkqGxwdEjM0JSU5MWJENUosLh4hRjc4KjstL/xAAbAQEAAwEBAQEAAAAAAAAAAAAAAQUGBAIDB//EADkRAQABAgMEBgkDAwUBAAAAAAABAgMEBREhMUFREhNxkaHhFSIyUmGBscHRI/DxJFNiFDM0Y6JC/9oADAMBAAIRAxEAPwD2wAAAkAAAAAJAAAAAAAAASAAAAJAAAJAAAAAAAAAAAGIAAAkAAAAAJAAQBIAAAAAAJAAAJAAAAEgAAAAAAAAAGMAAAAAAAAAAAAAAAAAm4AAAAkABIACQAAAAAAAAAABjAAAAAAAAAAFwIuAuAuAuBFwJuAuAuBNwFwJTAkBcCQJAAAAAAAAAAMYAAAAAAAEMCLgQ5AVcwhXpAI6QkOkAdIA6QCekAdIBPSATpgSpkCykErJgWTAlASAAAAAAAAAxgAAAAAAgCrYGGrWUdrJQ+LlTOOhQ+snGL3R2zfKK1nRYwl6/P6dOv073xvYi1Zj16tHOYrP+OvoqVSfbKSpp+8tbeRXJ9uuI7Nv4VtzOLcezTM+H5aMs/K26jBc5yfwPvGQ0ca57nxnOp4UeKn6d4j8On3yPXoK178+Dz6ar9yErPuv+FT9aQ9BW/fnuhPpqr3I71v08r/gw9eXyI9A0e/Pcn01PueKf09rfgx/MfyI9A0/3J7vM9NT7nj5LLP6r+BH81/8Akj0DH9zw80+mv8PHyWWf9T93X539pHoH/s/8+Z6a/wAPHySvCBP93/5v7SPQP/Z/580+mo9zx8mWHhB40Jeion8DzOQ1cLkd3m9RnVHGie9s0vCFS+3RrLloP4o+dWRXuFUeP4fSM4s8aZ8H1cFnngqjSdV0m91WLgvW2e05bmVYqjb0dezb5ui3mOHr2dLTt2OhoYmM0pQlGUXrUotSi12NFfVTNM6TGku2JiY1hsRkeUsiYSsAAAAAAAAAoAAgABIFWBDYGtia6irkocFnXnPKDdGi/pftT2qknuXle4ustyzrv1bvs8I5+SqzDMOp/Tt+19PNw1Sbk3KTcpN3cpNtt9rNRTTFMaUxpEM5VVNU61TrKCXkAAAAAAAAAAAQAb2SsrV8LLToVHHXeUHrpz86Px2nPiMLaxFOlyPnxj5uixirlidaJ+XB6lmznFTxkLrqVYW6Sk3dx8pcYmRxuBrwtek7YndP74tRhMXRiKdY3xvh0EJHE62RMhKwAAAAAAAFAAEAAAFWBjmwhzWdGU+hpVKm+Meqnvm9UfadWEsdfept89/ZxfDE3os2qq+X1eUzk5Nyk25SblJva29rNzTTFMREboY2qqapmZ3yglAAAAAAAAACAABIAABt5JyhPDVqdentg+tHdOD8aL5/I+GJsU37c26uPhPN98Nfqs3Irh7RgcTGpCFSDvGcYzi+MWrowtdE0VTTO+NjZU1RVTFUbpb0WeHpdBKQAAAAAAUAAAAEMCkmBr1pamSh5xn7ir9HT+9OU3yirL/t7C+yK3rXXXyiI7/4U2c3NKKaOc6938uPNKzwAAAAAAAEAAABIAAAAAeoZg4vTwcIt3dKU6XoTuvZJGPze30MTM84ift9mryu508PHw2OtpsrFgzohKQAAAAAAUAAAIAhgUkBp4yVovkSh5VnjV0sQlujTXe5P+hqsko0sTVzn7QzmcVa3Yp5Q+EXKoAJ0dV3ZLi9RGppqp0kfvIl66NXJYPIBKQQSVtrS5vWRqnSUJrc0+RJpKQgAmMW9hEyDj2rvQ1TogIAAHd+Dar1MRD7tSnP1otfymbz2n16KucT4fy0OS1epXTymPH+HoFFlCumxEgWCQAAAAAKAAABgVYGOYQ+flCVoskeSZxz0sVV7NCP8K+Zssqp6OFp+Ov1llc0q1xM/DT6Pmlir0Tmopye7YuLIlNMazotk7JNfGPTvoU7+O1e/moqcZmdNmehTGs/TtXOFwE1x0p2Q+u8y4W+tq6XHq27rFV6Xva7o8fysPR1rTi+JjcDVwk1Gb06UnZTStZ8GtxbYHMqb89CrZKsxuAm3HSjbC5bKhSc5uSpUU5VJcNv9D4371FqnpVzsdGHsVXatIh9PD5o1ZK9Wrot/ZitK3pZQ3c6mZ9SnvXlvLIiPWnuauUc2q9BOpTn0qWtxtoyt2cT3YziJnSuNHm7lmz1Z1aWExGmu1ami+oriunWFFdtTROjY7XsR7fFfCZOxGK100qdLdKV0nyW8q8VmdqxPRjbPwW2Fy6uuOlOyGxXzRrpXjVhJ8HFxXfrOGnOtu2me/8Ah3TlezZV4PjOpUoz6KvFxa48OKZbYfGUXo1iVXiMHVRvhupnWr0gdj4OJfSYhcYUn3OXzKHPY9WifjP2XmSztrjs+70iiZtftmJAuEgAAAAAVAgAAYFWBimSh8vKsuowPIcqz0sRXf8AmzXc7fA3OBp6OGtx8I8drH42rpYiufj9GqdTlYa9PTlTp7p1IQb5tI+GKuTbs1VRwh1YSiK7sUzxekZNoRhGMYpKMUkktyMNMzM6y10RERpDflBWIS5TOaEZRmnsUX7j7YfpdbT0d+sfV872nV1dLdpLmY7EbuWKl97NDBq9Ws1eTnoJ8IpL4sy+dXZm9FvhEfVpcqtxFnpcZdlTpqxTLRqZTglBgedYzDqGIk46lOOk15VzTZJcmq3VTPBQZxREVRVzZKNFVJwpvUpzjF8m9ZZ4q5NuzXXTviJVmEoiu9TTO6Zeh4GhFRUUkkkkktyMPM67ZbKIbNSkrEDiM88HGcZSXjQTlF8tx1YS9Nq7ExunZL44i3FduYfBwbvCN+BtaZ1phj7saVSzEvm6rweS/Waq40b904/Mpc8j9Gmfj9pXGTT+rVHw+706gZdo21EC5CQAAAAAKgAIAAVYGKZKHxssPqgeQYiV5zl96c33yZv7NPRt0xyiPoxV+elcqn4yxn0fJG9NbYyjKL4STujxctxcomid0xo+lq5NuuKo4OuyZl2Ekk+rPfFvX6OJjMTgruHq0qjZz4Nbh8VbvxrTO3lxbeJyurPWori3ZHLTRVVOlMaz8H3qqimNZnRy+VMf0nVhrjfrS+92LsNHlmW1W6utu7+EfeVFmGYU1U9Xbntl88vVG+pkPKaoScZ/Vyd7/dls7imzXAVXtLlv2o3xzj8rjLMbTa/Tr3Tul1tPKsNG6ad9lnczExMTpLRRMTGsPmZTymrNyaS957tWa7tXRojWXi5cpt09KudIcpWqOc3N6r6kuCNhgcJGGtdHjO2WVx2K/wBRc1jdG5CbTTWpppp8GtjOuqmKomJ3S5KappmKo3w7TJGW4VIrSejUS60e3iuwxuNwVeGr2+zwn98WuwmLoxFOsb+MNzEZTjbqnE6nKZdxSlGUb3lNNJcE953YDCV37saR6sTtn98XJjMTTZtzrO2d0Pj04aKSW5GyZGqdZ1WCHSZhO2LfbRmv4olTnUf0/wA4+61yf/fnsn7PU8O9Rk2mbcALkJAAAAAAqAAAQwKsDFUJQ+Hl2VovkTEazoidzx5H6Ew8ztSEABoBYiIiNyZqmd8hLykAQJi2tja5No8V26K/apie2NX0ovXKPZqmOyUPXrd2+L1s9U000xpTGnYiu5VXtqnUJeAAJiJjSU01TTOsSydPUtbTnbzmcv8AocNrr1cdzq/12I006csdt+97XvZ00xFMaRGkOaqqqqdap1CXlIHQZjP9dj/p1PcVecf8ae2FnlP/ACPlL1bDmRahtxAuQkAAAAACoAABAFWBiqEofDy7G8HyZ6p3widzx5H6Cw0pCACQAAAQAAAAAAAAEgAAHQ5ixvjI9lKo/cviVWcT/TfOFnlEf1Hyl6rQRkmobkCBYJAAAAAAqAAAQBDAxTRKHzcpUtKLQHjmUKDp1qtN6tGpJLlfV7LG8wt3rbNNfOI8/FjMVb6u9VT8WufdzpAACAAAAAAAAAkAAAAAOu8HeGvWrVd0KcYLnKV/5faUWeXNLdNHOde7+V1ktGtdVfKNO/8Ah6XRRmmhbMSBYJAAAAAAqBIACAIYGOSCGrXgSPPM+cjNP/FU1dJWqpblukaDJsZFM9RVx3dvL8KXNsLNUdbTw39nNxxo2eAAAgAAAAAAASAAACAAvCDey77FrbfAiZ0IiZ2Q9TzSyV/h6EYyVqk30lTsk/s+hWRjcwxPX3pqjdGyP38WvwOG6izFM752y6ekjhdjMiEpAAAAAABAAAAAgCskBhqRJQ0MVh1JNNXTVmuJMSPPM4M1Jwk6mGjpQet0l40fN4rsNHgc3pmIovzt978/lQ4zK51muz3fhy8lZuLTjJanGSaafai+iYqjWNsKSqmqmdJgsHksNQsAAgABIE2IDRGoWAnRY1Eqk3uZHSgXhR1pbZN2UIrSk3wSR5qr0jXhzlNNM1TpEay7fNXNpxca9eKUlrp09uh5UvK9xnMxzLrI6u1OzjPP4R8Pq0WX5d1X6lz2uEcvN3NCnYpVw24IgXISAAAAAAAgAAAAAIaApJBDDOBI1quHuB8vH5Fo1vrKcJ8HKKbXJn2tX7lr2KpjsfO5aoue3ES+LXzKwz8VTh5s38bnfRm+Kp3zE9sR9tHHVlmHq/8AnT5tKeY1PdVrLnoP4H2jPL/Gmnx/L4zk9jnPh+GCpmVbxa0/TFM+kZ7Xxojvl4nJrfCqXw8q5ErYbrS+kp/iRVtHzlu5llg8ytYj1fZq5c+yVfistuWfWjbD5pYq0AAbWDyfWr3cKsYJPR0dFtrVzKrG5hOGudHoaxMa66rXB4CjEW+l0tr6dLNbEP8Abx9R/M5Yzynjb8fJ1eho97w82xDNDEP9vH1H8yfTlv8At+Pkj0N/n4ebNDMyu9uIS5U38zzOeU8Lfj5EZLzr8PNvYfMeGrpa1WfYrRT958K87uz7FMR4/h9qMnsx7UzLosl5AoUPqqcYvfJ65v0vWVt/FXb3+5Vr9O5YWcPbtexTo+3So2Od92zCJAykJAAAAAAAAAAAAAgABDQFWghSUCRjdMCjpAUdEDFOgSNWvg07pq6YQ4zLuaW2phbQltdJ6oS5cH7OReYLN6qPUvbY58Y/P17VTi8rpueta2Ty4eTkKlOUJOE4uE46nGSs0aKiumumKqJ1iWeuW6rdXRqjSVT08Pp5vYro68VLxKloPsl9l9+r0lbmuH62x0o307flx/PyWWV4jq7vRndVs+fB6LhKaZkmofRpUUQlsRoAZo0SBljTAyxiBchIAAAAAAAAAAAAAAAAgBYCGghDQEaJIq4gVcAMcqYGrWoXJHwst5ApYiNpx6yXVnHVOPJ/A6sNi7uHq1ontjhLnv4a3fp0rj58Xn+V8jVsK3prTpX1VYrV/uW5mpweYWsTGkbKuX45s3i8Bcsbd9PP8vnna4YnR6Zmtjunowm/HXUqLy1tfp1P0mLx2H6i9NHDfHZ+9jYYO/19qKuPHtdPRicTqbMYAZFECyRCUgAAAAAAAAAAAAAAAAAAAAAAIsAsEKtAVcSRSUAMFSkBo4rBKSaaTTVmmrpo9RMxOsImHE5bzOabqYTVvdF+K/Ne7l7i9wecTT6l/bHPj8+f17VPi8qpr9a1snlw8mTMOhXhXrU50qsI6ClLTi1FVFKys99033E5xXauW6K6KomdeHLy+7zlVF23XVRXTMR93otGBn122IogWCQAAAAAAAAAAAAAAAAAAAAAAAAAAAEWAhxCFXAkY5UwMTw6YGSjRS3AbCiQlIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARYBYCbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//Z"><img></pre>
+   
+  </form>
+  
+  <script>
+    function refresh(){window.location.reload();}
+//    // while(1){call()}
+//    const interval = setInterval(function() {
+//     call();
+//     console.log("Called")
+//  //  call();
+//  }, 2000);
+call();
+    function call() {
+        var status = document.getElementById('status');
+        var img = document.getElementById('img')
+        img.innerHTML=''
+        for(i=0;i<6;i++){
+            img.innerHTML += `<img width="300" src='./Frame?value=${i}'/>`
+        }
+        
+    };
+</script>
+  
+
+
+</body>
+
+
+
+
+</html>
